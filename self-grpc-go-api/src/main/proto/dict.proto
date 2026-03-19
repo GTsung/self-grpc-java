@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package dict;
+
+option go_package="./dict";
+
+service DictService {
+
+  rpc CreateDict(CreateDictReq) returns (CreateDictResp);
+
+  rpc GetDict(GetDictReq) returns (GetDictResp);
+
+  rpc UpdateDict(UpdateDictReq) returns (UpdateDictResp);
+
+  rpc DeleteDict(DeleteDictReq) returns (DeleteDictResp);
+
+  rpc ListDict(ListDictReq) returns (ListDictResp);
+
+}
+
+message Dict {
+
+  int64 id = 1;
+  string key = 2;
+  string value = 3;
+}
+
+message CreateDictReq {
+  string key = 1;
+  string value = 2;
+}
+
+message CreateDictResp {
+  int64 id = 1;
+}
+
+message GetDictReq {
+  int64 id = 1;
+}
+
+message GetDictResp {
+  Dict dict = 1;
+}
+
+message UpdateDictReq {
+  int64 id = 1;
+  string key = 2;
+  string value = 3;
+}
+
+message UpdateDictResp {}
+
+message DeleteDictReq {
+  int64 id = 1;
+}
+
+message DeleteDictResp {}
+
+message ListDictReq {}
+
+message ListDictResp {
+  repeated Dict list = 1;
+}
