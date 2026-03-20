@@ -17,6 +17,7 @@
     <module>self-grpc-fifth-client</module>
     <module>self-grpc-go-api</module>
     <module>self-grpc-go-client</module>
+      <module>self-http-gozero-gateway</module>
   </modules>
 
   <parent>

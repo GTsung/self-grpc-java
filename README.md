@@ -19,4 +19,5 @@
   * 通過grpc調用go工程,controller加入了[jackson-datatype-protobuf]依賴jackson才能直接轉換
   * [jackson-datatype-protobuf]可能與jackson版本衝突
   * 調用grpc服務端,只會在第一次初始化一次DictServiceGrpc
-  
+* self-http-gozero-gateway
+  * 使用http調用go-zero網關
